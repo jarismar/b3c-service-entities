@@ -1,6 +1,10 @@
 package entity
 
-import "time"
+import (
+	"time"
+
+	"github.com/google/uuid"
+)
 
 type EarningType string
 
@@ -11,11 +15,12 @@ const (
 
 type Earning struct {
 	Id       int64
+	UUID     uuid.UUID
 	Type     EarningType
 	Company  *Company
 	User     *User
 	Taxes    []InvoiceTax
-	Paydate  time.Time
+	PayDate  time.Time
 	RawValue float64
 	NetValue float64
 }
