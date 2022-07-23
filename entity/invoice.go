@@ -15,6 +15,7 @@ type InvoiceItem struct {
 	Balance int64
 	Price   float64
 	Debit   bool
+	Order   int64
 }
 
 type Invoice struct {
