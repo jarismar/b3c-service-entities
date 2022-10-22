@@ -13,19 +13,13 @@ const (
 	DIV EarningType = "DIV"
 )
 
-type EarningTax struct {
-	Id    int64
-	Tax   *Tax
-	Value float64
-}
-
 type Earning struct {
 	Id       int64
 	UUID     uuid.UUID
 	Type     EarningType
 	Company  *Company
 	User     *User
-	Taxes    []EarningTax
+	TaxGroup *TaxGroup
 	PayDate  time.Time
 	RawValue float64
 	NetValue float64
