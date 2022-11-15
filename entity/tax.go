@@ -20,7 +20,7 @@ type Tax struct {
 type TaxGroup struct {
 	Id         int64
 	Source     string
-	ExternalId string
+	ExternalId int64
 	Taxes      []TaxInstance
 }
 
