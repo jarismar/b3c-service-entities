@@ -2,14 +2,12 @@ package entity
 
 import "time"
 
-type TaxSourceType string
-
 const (
-	BIV TaxSourceType = "BIV"
-	EAR TaxSourceType = "EAR"
-	ITB TaxSourceType = "ITB"
-	TRB TaxSourceType = "TRB"
-	TRD TaxSourceType = "TRD"
+	BIV string = "BIV"
+	EAR string = "EAR"
+	ITB string = "ITB"
+	TRB string = "TRB"
+	TRD string = "TRD"
 )
 
 type Tax struct {
@@ -21,7 +19,7 @@ type Tax struct {
 
 type TaxGroup struct {
 	Id         int64
-	Source     TaxSourceType
+	Source     string
 	ExternalId string
 	Taxes      []TaxInstance
 }

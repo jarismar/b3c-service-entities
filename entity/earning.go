@@ -6,17 +6,15 @@ import (
 	"github.com/google/uuid"
 )
 
-type EarningType string
-
 const (
-	JCP EarningType = "JCP"
-	DIV EarningType = "DIV"
+	JCP string = "JCP"
+	DIV string = "DIV"
 )
 
 type Earning struct {
 	Id       int64
 	UUID     uuid.UUID
-	Type     EarningType
+	Type     string
 	Company  *Company
 	User     *User
 	TaxGroup *TaxGroup
