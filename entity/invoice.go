@@ -14,14 +14,16 @@ type InvoiceItem struct {
 }
 
 type Invoice struct {
-	Id          int64
-	Number      int64
-	User        *User
-	TaxGroup    *TaxGroup
-	FileName    string
-	MarketDate  time.Time
-	BillingDate time.Time
-	RawValue    float64
-	NetValue    float64
-	Items       []InvoiceItem
+	Id            int64
+	Number        int64
+	User          *User
+	TaxGroup      *TaxGroup
+	FileName      string
+	MarketDate    time.Time
+	BillingDate   time.Time
+	TotalSold     float64
+	TotalAcquired float64
+	RawValue      float64
+	NetValue      float64
+	Items         []InvoiceItem
 }
