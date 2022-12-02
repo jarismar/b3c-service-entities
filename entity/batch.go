@@ -13,13 +13,14 @@ type CompanyBatch struct {
 }
 
 type ItemBatch struct {
-	Id         int64
-	Item       *InvoiceItem
-	TaxGroup   *TaxGroup
-	Qty        int64
-	AvgPrice   float64
-	RawPrice   float64
-	TotalTaxes float64
+	Id           int64
+	Item         *InvoiceItem
+	TaxGroup     *TaxGroup
+	CompanyBatch *CompanyBatch
+	Qty          int64
+	AvgPrice     float64
+	RawPrice     float64
+	TotalTaxes   float64
 }
 
 type Trade struct {
