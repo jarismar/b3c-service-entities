@@ -5,9 +5,9 @@ import "time"
 type InvoiceItem struct {
 	Id         int64
 	Company    *Company
+	ItemBatch  *ItemBatch
 	MarketDate time.Time
 	Qty        int64
-	Balance    int64
 	Price      float64
 	Debit      bool
 	Order      int64
