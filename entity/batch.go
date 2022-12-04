@@ -4,7 +4,9 @@ import "time"
 
 type CompanyBatch struct {
 	Id         int64
+	User       *User
 	Company    *Company
+	StartDate  time.Time
 	Qty        int64
 	AvgPrice   float64
 	TotalPrice float64
@@ -37,6 +39,7 @@ type Trade struct {
 
 type TradeBatch struct {
 	Id             int64
+	User           *User
 	TaxGroup       *TaxGroup
 	StartDate      time.Time
 	AccLoss        float64
