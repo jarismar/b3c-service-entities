@@ -26,16 +26,17 @@ type ItemBatch struct {
 }
 
 type Trade struct {
-	Id         int64
-	TaxGroup   *TaxGroup
-	Item       *InvoiceItem
-	TradeBatch *TradeBatch
-	MarketDate time.Time
-	Qty        int64
-	AvgPrice   float64
-	RawResults float64
-	RawPrice   float64
-	TotalTax   float64
+	Id           int64
+	TaxGroup     *TaxGroup
+	Item         *InvoiceItem
+	TradeBatch   *TradeBatch
+	CompanyBatch *CompanyBatch
+	MarketDate   time.Time
+	Qty          int64
+	AvgPrice     float64
+	RawResults   float64
+	RawPrice     float64
+	TotalTax     float64
 }
 
 type TradeBatch struct {
