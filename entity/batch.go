@@ -29,6 +29,7 @@ type Trade struct {
 	Id         int64
 	TaxGroup   *TaxGroup
 	Item       *InvoiceItem
+	TradeBatch *TradeBatch
 	MarketDate time.Time
 	Qty        int64
 	AvgPrice   float64
