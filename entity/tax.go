@@ -3,11 +3,11 @@ package entity
 import "time"
 
 const (
-	BIV string = "BIV"
-	EAR string = "EAR"
-	ITB string = "ITB"
-	TRB string = "TRB"
-	TRD string = "TRD"
+	BIV string = "BIV" // broker invoice
+	EAR string = "EAR" // earning
+	ITB string = "ITB" // item batch
+	TRB string = "TRB" // trade batch
+	TRD string = "TRD" // trade
 )
 
 type Tax struct {
@@ -26,6 +26,7 @@ type TaxGroup struct {
 
 type TaxInstance struct {
 	Id         int64
+	TaxGroupId int64
 	Tax        *Tax
 	MarketDate time.Time
 	TaxValue   float64
