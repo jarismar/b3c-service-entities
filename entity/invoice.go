@@ -7,6 +7,7 @@ type InvoiceItem struct {
 	Company    *Company
 	ItemBatch  *ItemBatch
 	Trade      *Trade
+	InvoiceID  int64
 	MarketDate time.Time
 	Qty        int64
 	Price      float64
