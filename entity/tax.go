@@ -33,3 +33,23 @@ type TaxInstance struct {
 	BaseValue  float64
 	TaxRate    float64
 }
+
+func (taxGroup *TaxGroup) GetTaxInstanceByCode(taxCode string) *TaxInstance {
+	for _, taxInstance := range taxGroup.Taxes {
+		if taxInstance.Tax.Code == taxCode {
+			return &taxInstance
+		}
+	}
+
+	return nil
+}
+
+func (taxGroup *TaxGroup) GetTotalTax() float64 {
+	total := 0.0
+
+	for _, taxInstance := range taxGroup.Taxes {
+		total = total + taxInstance.TaxValue
+	}
+
+	return total
+}
