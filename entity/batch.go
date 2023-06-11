@@ -39,15 +39,19 @@ type Trade struct {
 	TotalTax     float64
 }
 
-type TradeBatch struct {
-	Id         int64
-	User       *User
-	TaxGroup   *TaxGroup
-	StartDate  time.Time
-	AccLoss    float64
+type TradeBatchData struct {
 	Results    float64
-	BDRResults float64
-	ETFResults float64
-	TotalTrade float64
+	AccLoss    float64
 	TotalTax   float64
+	TotalTrade float64
+}
+
+type TradeBatch struct {
+	Id        int64
+	User      *User
+	TaxGroup  *TaxGroup
+	StartDate time.Time
+	Shr       *TradeBatchData
+	Bdr       *TradeBatchData
+	Etf       *TradeBatchData
 }
